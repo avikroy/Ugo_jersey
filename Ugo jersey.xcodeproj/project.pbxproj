@@ -171,7 +171,6 @@
 		8CA3C1E71968375A002BC4F7 /* zbar-help.html in Resources */ = {isa = PBXBuildFile; fileRef = 8CA3C1E21968375A002BC4F7 /* zbar-help.html */; };
 		8CA3C1E81968375A002BC4F7 /* zbar-helpicons.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CA3C1E31968375A002BC4F7 /* zbar-helpicons.png */; };
 		8CA3C1E91968375A002BC4F7 /* zbar-samples.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CA3C1E41968375A002BC4F7 /* zbar-samples.png */; };
-		8CBBFD4A1975901900CC1F62 /* libPDFCreate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CBBFD491975901900CC1F62 /* libPDFCreate.a */; };
 		8CC0358C197D867C000C6B85 /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC0358B197D867C000C6B85 /* libzbar.a */; };
 		8CD874A918A9130A00887033 /* footer.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CD874A818A9130A00887033 /* footer.png */; };
 		8CD874AD18A915EC00887033 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD874AC18A915EC00887033 /* GTMNSString+HTML.m */; };
@@ -182,6 +181,7 @@
 		8CD89E4218B8FEEB003093DE /* ShowPDFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD89E4018B8FEEA003093DE /* ShowPDFViewController.m */; };
 		8CD89E4318B8FEEB003093DE /* ShowPDFViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CD89E4118B8FEEB003093DE /* ShowPDFViewController.xib */; };
 		8CE3E0CC18A7551B00ECDFE4 /* Separator2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CE3E0CB18A7551B00ECDFE4 /* Separator2.png */; };
+		8CE7AC7919897CFD006B4DEF /* libPDFCreate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CBBFD491975901900CC1F62 /* libPDFCreate.a */; };
 		8CF7737617E4A66900E63D7A /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CF7737217E4A60100E63D7A /* CoreAudio.framework */; };
 		8CF7737717E4A66900E63D7A /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CF7736C17E4A5A900E63D7A /* CoreMedia.framework */; };
 		8CF7737817E4A66900E63D7A /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CF7736E17E4A5B300E63D7A /* CoreVideo.framework */; };
@@ -474,6 +474,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CE7AC7919897CFD006B4DEF /* libPDFCreate.a in Frameworks */,
 				8CC0358C197D867C000C6B85 /* libzbar.a in Frameworks */,
 				8C34CD831953EBB7000721FF /* FacebookSDK.framework in Frameworks */,
 				0AFD43C6189C0ADC00498FD6 /* AdSupport.framework in Frameworks */,
@@ -485,7 +486,6 @@
 				8CF7737717E4A66900E63D7A /* CoreMedia.framework in Frameworks */,
 				8CF7737817E4A66900E63D7A /* CoreVideo.framework in Frameworks */,
 				2925684C17B52736008B0406 /* MobileCoreServices.framework in Frameworks */,
-				8CBBFD4A1975901900CC1F62 /* libPDFCreate.a in Frameworks */,
 				2925684717B51C5D008B0406 /* libz.1.2.5.dylib in Frameworks */,
 				2925684417B51C19008B0406 /* libsqlite3.0.dylib in Frameworks */,
 				2925684317B51C08008B0406 /* SystemConfiguration.framework in Frameworks */,

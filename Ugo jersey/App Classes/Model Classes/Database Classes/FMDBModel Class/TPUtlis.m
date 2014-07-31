@@ -109,6 +109,10 @@
     return YES;
 }
 
++(void)dummyMethod{
+    
+}
+
 //clear subviews
 
 

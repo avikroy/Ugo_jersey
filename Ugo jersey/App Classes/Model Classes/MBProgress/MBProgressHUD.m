@@ -18,7 +18,7 @@
 #endif
 
 
-static const CGFloat kPadding = 4.f;
+static const CGFloat kPadding = 4.f;//padding arround the rectangle
 static const CGFloat kLabelFontSize = 16.f;
 static const CGFloat kDetailsLabelFontSize = 12.f;
 
