@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import <FacebookSDK/FacebookSDK.h>
+#import "MailObject.h"
 
 @class LoginVC;
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate,MailObjectDelegate>
 {
     FBSession *_session;
 }
@@ -24,5 +25,7 @@
 @property (strong, nonatomic)AVAudioPlayer *audioPlayerClk;
 
 @property (nonatomic, strong)  FBSession *_session;
+@property (nonatomic, retain) MailObject *mail;
+
 -(void)playClk;
 @end

@@ -10,9 +10,48 @@
 #import "LoginVC.h"
 #import "DBManager.h"
 #import "Global.h"
+#import <CrashReporter/CrashReporter.h>
+
 @implementation AppDelegate
 @synthesize audioPlayerClk;
 @synthesize _session;
+
+- (void) handleCrashReport {
+    PLCrashReporter *crashReporter = [PLCrashReporter sharedReporter];
+    NSData *crashData;
+    NSError *error;
+
+    // Try loading the crash report
+    crashData = [crashReporter loadPendingCrashReportDataAndReturnError: &error];
+    if (crashData == nil) {
+        NSLog(@"Could not load crash report: %@", error);
+        goto finish;
+    }
+    // We could send the report from here, but we'll just print out
+    // some debugging info instead
+    PLCrashReport *report = [[[PLCrashReport alloc] initWithData: crashData error: &error] autorelease];
+    if (report == nil) {
+        NSLog(@"Could not parse crash report");
+        goto finish;
+    }
+
+    NSLog(@"Crashed on %@", report.systemInfo.timestamp);
+    NSLog(@"Crashed with signal %@ (code %@, address=0x%" PRIx64 ")", report.signalInfo.name,
+          report.signalInfo.code, report.signalInfo.address);
+    NSLog(@"Crashed reason %@ -> %@", report.exceptionInfo.exceptionName ,report.exceptionInfo.exceptionReason);
+    
+    MailObject *mObj=[[MailObject alloc] init];
+    mObj.delegate=self;
+    mObj.mailBody=[NSString stringWithFormat:@"<HTML><BODY><B>Following is detail diagonistic report</B>,Please send it for better support\n\n\n<table border=\"1\"><tr><td>Crashed on</td><td>%@</td></tr><tr><td>Crashed with signal</td><td>%@</td></tr></tr><tr><td>Exception Name</td><td>%@</td></tr></tr><tr><td>Exception Reason</td><td>%@</td></tr></table></BODY></HTML>",report.systemInfo.timestamp,report.signalInfo.name,report.exceptionInfo.exceptionName,report.exceptionInfo.exceptionReason];
+    [mObj showInViewController:self.navigation];
+    
+finish:
+    [crashReporter purgePendingCrashReport];
+    return;
+}
+
+
+
 - (void)dealloc
 {
     [_window release];
@@ -22,6 +61,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+ 
+//   [self performSelector:@selector(didtestcrash) withObject:nil afterDelay:2.0];
+    
+    
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     //[[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:NO];
@@ -41,6 +85,19 @@
     [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:(242.0f/255.0f) green:(104.0f/255.0f) blue:(35.0f/255.0f) alpha:1.0f]];
 //    self.navigation.navigationBar.tintColor = [UIColor colorWithRed:(242.0f/255.0f) green:(104.0f/255.0f) blue:(35.0f/255.0f) alpha:1.0f];
     self.window.rootViewController = self.navigation;
+    
+    PLCrashReporter *crashReporter = [PLCrashReporter sharedReporter];
+    NSError *error;
+    
+    // Check if we previously crashed
+    if ([crashReporter hasPendingCrashReport])
+        [self handleCrashReport];
+    
+    // Enable the Crash Reporter
+    if (![crashReporter enableCrashReporterAndReturnError: &error])
+        NSLog(@"Warning: Could not enable crash reporter: %@", error);
+
+    
     [self.navigation.navigationBar setTranslucent:NO];
     [self.window makeKeyAndVisible];
     
@@ -93,7 +150,21 @@
             //avp.delegate = self;
             [audioPlayerClk prepareToPlay];
         }
-    }
+}
+
+#pragma mark -
+#pragma mark <MailObject Delegate>
+
+- (void) mailSuccess
+{
+   
+}
+
+- (void) mailCancelled
+{
+    
+}
+
 
 
 @end

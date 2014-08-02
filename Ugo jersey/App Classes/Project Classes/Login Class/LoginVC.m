@@ -182,7 +182,7 @@ static NSString* kAppId = @"653877478005665";
         
         if([finalArr isKindOfClass:[NSArray class]]){
             if([[finalArr objectAtIndex:0] integerValue]==3){
-                
+            
                 NSLog(@"===%@",[finalArr objectAtIndex:2]);
 
                 NSUserDefaults *defaults=User_Defaults;
