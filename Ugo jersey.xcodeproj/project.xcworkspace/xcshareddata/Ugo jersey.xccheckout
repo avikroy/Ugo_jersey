@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>931585B1-E8BB-4552-9568-30DBCD5BD0F3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Ugo jersey</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>A8FC2F02-623C-4AED-8C7B-8FA7C8A7D83D</key>
+		<string>https://github.com/avikroy/Ugo_jersey</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Ugo jersey.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>A8FC2F02-623C-4AED-8C7B-8FA7C8A7D83D</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/avikroy/Ugo_jersey</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>A8FC2F02-623C-4AED-8C7B-8FA7C8A7D83D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A8FC2F02-623C-4AED-8C7B-8FA7C8A7D83D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Ugo_jersey</string>
+		</dict>
+	</array>
+</dict>
+</plist>
