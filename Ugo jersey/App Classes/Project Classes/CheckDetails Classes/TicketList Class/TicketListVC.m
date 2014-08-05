@@ -55,7 +55,7 @@
     
     [self createSearch];
    
-    [[self.searchTable.subviews objectAtIndex:0] removeFromSuperview];
+//    [[self.searchTable.subviews objectAtIndex:0] removeFromSuperview];
    // [self.searchTable setFrame:CGRectMake(self.searchTable.frame.origin.x, self.searchTable.frame.origin.y, self.searchTable.frame.size.width-100.0, self.searchTable.frame.size.height)];
 }
 
