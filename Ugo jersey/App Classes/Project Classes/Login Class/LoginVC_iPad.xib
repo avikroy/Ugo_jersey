@@ -24,7 +24,7 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ashim@xentrictechnologies.in" minimumFontSize="17" background="text_box.png" id="30">
+                <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="text_box.png" id="30">
                     <rect key="frame" x="264" y="230" width="437" height="84"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -41,7 +41,7 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="option123" minimumFontSize="17" background="text_box.png" id="32">
+                <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="text_box.png" id="32">
                     <rect key="frame" x="264" y="400" width="437" height="84"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <fontDescription key="fontDescription" type="system" pointSize="30"/>

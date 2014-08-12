@@ -165,6 +165,8 @@
 		8C37165018D4883E00C31B48 /* print.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C37164F18D4883E00C31B48 /* print.png */; };
 		8C37165218D4885A00C31B48 /* save_new.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C37165118D4885A00C31B48 /* save_new.png */; };
 		8C4B204E181BD84D007C6C46 /* NSNull+CheckNull.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4B204D181BD84D007C6C46 /* NSNull+CheckNull.m */; };
+		8C663D16199A8D5600255B7F /* CrashReporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C95008D198D6AA500175350 /* CrashReporter.framework */; };
+		8C663D17199A8D6300255B7F /* libPDFCreate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CBBFD491975901900CC1F62 /* libPDFCreate.a */; };
 		8C8F034A18A669F800038B30 /* TicketDetails+AdminViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C8F034818A669F800038B30 /* TicketDetails+AdminViewController.m */; };
 		8C8F034B18A669F800038B30 /* TicketDetails+AdminViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C8F034918A669F800038B30 /* TicketDetails+AdminViewController.xib */; };
 		8C950087198D664900175350 /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C950081198D664900175350 /* libzbar.a */; };
@@ -174,12 +176,10 @@
 		8C95008B198D664900175350 /* zbar-samples.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C950086198D664900175350 /* zbar-samples.png */; };
 		8C950092198D736700175350 /* MailObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C950091198D736700175350 /* MailObject.m */; };
 		8C950094198D763100175350 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C950093198D763100175350 /* MessageUI.framework */; };
-		8C950095198D7B6C00175350 /* CrashReporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C95008D198D6AA500175350 /* CrashReporter.framework */; };
 		8CA3C1E61968375A002BC4F7 /* zbar-back.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CA3C1E11968375A002BC4F7 /* zbar-back.png */; };
 		8CA3C1E71968375A002BC4F7 /* zbar-help.html in Resources */ = {isa = PBXBuildFile; fileRef = 8CA3C1E21968375A002BC4F7 /* zbar-help.html */; };
 		8CA3C1E81968375A002BC4F7 /* zbar-helpicons.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CA3C1E31968375A002BC4F7 /* zbar-helpicons.png */; };
 		8CA3C1E91968375A002BC4F7 /* zbar-samples.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CA3C1E41968375A002BC4F7 /* zbar-samples.png */; };
-		8CA9C3EB198BEE91009DCF64 /* libPDFCreate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CBBFD491975901900CC1F62 /* libPDFCreate.a */; };
 		8CD874A918A9130A00887033 /* footer.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CD874A818A9130A00887033 /* footer.png */; };
 		8CD874AD18A915EC00887033 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD874AC18A915EC00887033 /* GTMNSString+HTML.m */; };
 		8CD874B018A91A9A00887033 /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD874AF18A91A9A00887033 /* NSString+HTML.m */; };
@@ -513,9 +513,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C950095198D7B6C00175350 /* CrashReporter.framework in Frameworks */,
+				8C663D17199A8D6300255B7F /* libPDFCreate.a in Frameworks */,
+				8C663D16199A8D5600255B7F /* CrashReporter.framework in Frameworks */,
 				8C950094198D763100175350 /* MessageUI.framework in Frameworks */,
-				8CA9C3EB198BEE91009DCF64 /* libPDFCreate.a in Frameworks */,
 				8C34CD831953EBB7000721FF /* FacebookSDK.framework in Frameworks */,
 				0AFD43C6189C0ADC00498FD6 /* AdSupport.framework in Frameworks */,
 				0AFD43C4189C0AD500498FD6 /* Accounts.framework in Frameworks */,
@@ -1689,6 +1689,8 @@
 					Framework,
 					"$(PROJECT_DIR)/iOS",
 					Framework,
+					"$(PROJECT_DIR)/iOS",
+					Framework,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ugo jersey/Ugo jersey-Prefix.pch";
@@ -1722,6 +1724,8 @@
 					"$(PROJECT_DIR)/Ugo",
 					jersey,
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/iOS",
+					Framework,
 					"$(PROJECT_DIR)/iOS",
 					Framework,
 					"$(PROJECT_DIR)/iOS",
