@@ -341,7 +341,7 @@
     currentX=kMargin;
     currentPageY+=335;
        
-    NSArray *arr = [NSArray arrayWithObjects:@"2",@"1",@"0", nil];
+    NSArray *arr = [NSArray arrayWithObjects:@"2",@"1", nil];
     int rand= arc4random()%[arr count];
     NSLog(@"%d",rand);
        
