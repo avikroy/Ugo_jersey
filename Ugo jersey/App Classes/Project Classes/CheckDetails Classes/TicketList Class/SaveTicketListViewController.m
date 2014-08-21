@@ -318,11 +318,15 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
     currentX=kMargin;
     currentPageY+=335;
     
-    NSArray *arr = [NSArray arrayWithObjects:@"2",@"1",  nil];
-    int rand= arc4random()%[arr count];
-    NSLog(@"%d",rand);
     
-    [CreatePDF drawImage:[UIImage imageNamed:[NSString stringWithFormat:@"banner_%d.png",rand]] atRect:CGRectMake(currentX, currentPageY, maxWidth-4, 50) inContext:currentContext];
+    NSArray *arr = [NSArray arrayWithObjects:@"2",@"1", @"2",@"1",@"2",@"1",@"2",@"1",nil];
+    int lowerBound = 1;
+    int upperBound = [arr count];
+    int rndValue = lowerBound + arc4random() % (upperBound - lowerBound);
+    
+
+    
+    [CreatePDF drawImage:[UIImage imageNamed:[NSString stringWithFormat:@"banner_%@.png",[arr objectAtIndex:rndValue]]]  atRect:CGRectMake(currentX, currentPageY, maxWidth-4, 50) inContext:currentContext];
 
    // [CreatePDF drawImage:[UIImage imageNamed:@"banner.jpg"] atRect:CGRectMake(currentX, currentPageY, maxWidth-4, 50) inContext:currentContext];
     
