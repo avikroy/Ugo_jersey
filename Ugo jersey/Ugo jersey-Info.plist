@@ -29,6 +29,8 @@
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>fb653877478005665</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>fb653877478005665</string>
