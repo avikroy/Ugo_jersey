@@ -25,6 +25,8 @@
 @property (retain, nonatomic) IBOutlet UILabel *EventEndDtVal_Lbl;
 @property (retain, nonatomic) IBOutlet UILabel *EventStartTimeVal_Lbl;
 @property (retain, nonatomic) IBOutlet UILabel *EventEndTimeVal_Lbl;
+@property (retain, nonatomic) IBOutlet UIButton *btnAllowEntry;
+@property (retain, nonatomic) IBOutlet UIButton *btnDeclineEntry;
 
 @property(retain,nonatomic)Ticket *ticket;
 @property(retain,nonatomic)Event *event;

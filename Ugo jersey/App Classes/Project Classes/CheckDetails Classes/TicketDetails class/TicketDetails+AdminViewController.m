@@ -250,9 +250,11 @@
     [CreatePDF drawImage:[UIImage imageNamed:@"my-ticket5a copy.jpg"] atRect:CGRectMake(2, 2, kDefaultPageWidth-4, kDefaultPageHeight-4) inContext:currentContext];
     currentPageY+=30;
     //490, 30,87 , 87    490, 330,87 , 87
-    [CreatePDF drawImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://www.ugojersey.com/magento/aa.php?product=%@&format=2",self.ticket.ticket_unique_id]]]] atRect:CGRectMake(450, 30,120 , 115) inContext:currentContext];
-    [CreatePDF drawImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://www.ugojersey.com/magento/aa.php?product=%@&format=2",self.ticket.ticket_unique_id]]]] atRect:CGRectMake(400, 330,180 , 180) inContext:currentContext];
-    [DBManager updateToAdminTicketSaveQRImage:self.ticket.ticket_unique_id image:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://www.ugojersey.com/magento/aa.php?product=%@&format=2",self.ticket.ticket_unique_id]]]];
+    [CreatePDF drawImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://www.ugojersey.com/aa.php?product=%@&format=2",self.ticket.ticket_unique_id]]]] atRect:CGRectMake(450, 30,120 , 115) inContext:currentContext];
+    
+    [CreatePDF drawImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://www.ugojersey.com/aa.php?product=%@&format=2",self.ticket.ticket_unique_id]]]] atRect:CGRectMake(400, 330,180 , 180) inContext:currentContext];
+    
+    [DBManager updateToAdminTicketSaveQRImage:self.ticket.ticket_unique_id image:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://www.ugojersey.com/aa.php?product=%@&format=2",self.ticket.ticket_unique_id]]]];
         
     [CreatePDF drawString:self.ticket.ticket_event_name atRect:CGRectMake(currentX, currentPageY, 300.0, 25.0) withColor:[UIColor grayColor] font:[UIFont systemFontOfSize:25] alignment:NSTextAlignmentLeft];
     currentPageY+=40;

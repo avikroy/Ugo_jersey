@@ -71,6 +71,13 @@
     self.EventEndDtVal_Lbl.text=self.event.event_end_date;
     self.EventStartTimeVal_Lbl.text=self.event.event_start_time;
     self.EventEndTimeVal_Lbl.text=self.event.event_end_time;
+    
+    if([self.ticket.ticket_admit_status isEqualToString:@"1"]){
+        self.btnAllowEntry.enabled=NO;
+    }else{
+        self.btnAllowEntry.enabled=YES;
+
+    }
 }
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -204,6 +211,8 @@
     [_EventEndDtVal_Lbl release];
     [_EventStartTimeVal_Lbl release];
     [_EventEndTimeVal_Lbl release];
+    [_btnAllowEntry release];
+    [_btnDeclineEntry release];
     [super dealloc];
 }
 

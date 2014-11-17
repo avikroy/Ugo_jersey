@@ -5,7 +5,8 @@
 //  Created by Debasish Pal on 25/05/12.
 //  Copyright (c) 2012 ObjectSol Technologies. All rights reserved.
 //
-#define BASE_URL @"http://www.ugojersey.com/magento/ajax/iapp.php"
+#define BASE_URL_OLD @"http://www.ugojersey.com/magento/ajax/iapp.php"
+#define BASE_URL @"http://www.ugojersey.com/ajax/iapp.php"
 
 #define App_Delegate_Instance (AppDelegate *)[[UIApplication sharedApplication]delegate]
 #define User_Defaults [NSUserDefaults standardUserDefaults]
