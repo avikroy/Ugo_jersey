@@ -102,7 +102,7 @@
         [alert show];*/
         
         self.ticket.ticket_admit_status=@"1";
-        [DBManager updateTicketToAdmitted:self.ticket.ticket_unique_id];
+        [DBManager updateTicketToAdmitted:self.ticket];
         
         self.StatVal_Lbl.text=[self admitStatusForTicket:[self.ticket.ticket_admit_status intValue]];
         
@@ -158,7 +158,7 @@
         if ([[finalDict objectForKey:@"web_request_succsess_status"] isEqualToString:@"1"])
         {
             self.ticket.ticket_admit_status=@"1";
-            [DBManager updateTicketToAdmitted:self.ticket.ticket_unique_id];
+            [DBManager updateTicketToAdmitted:self.ticket];
             
             self.StatVal_Lbl.text=[self admitStatusForTicket:[self.ticket.ticket_admit_status intValue]];
             

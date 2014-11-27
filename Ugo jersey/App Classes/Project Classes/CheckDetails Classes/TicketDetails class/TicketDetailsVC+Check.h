@@ -12,6 +12,11 @@
 #import "ConnectionModel.h"
 #import "DBManager.h"
 
+typedef enum {
+    kTicketDeclined=0,
+    kTicketAdmitted,
+}TicketStatus;
+
 @interface TicketDetailsVC_Check : BaseViewController<connectionDidReceiveResponse>
 
 @property (retain, nonatomic) IBOutlet UIScrollView *TicketDetailsScroll;

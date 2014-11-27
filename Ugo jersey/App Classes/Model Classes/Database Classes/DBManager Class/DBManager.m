@@ -378,14 +378,14 @@
     return [anEvent autorelease];
 }
 
-+ (BOOL)updateTicketToAdmitted:(NSString *)unique_id
++ (BOOL)updateTicketToAdmitted:(Ticket *)ticket
 {
     FMDatabase *database=[DBManager getDatabase];
     if(database)
     {
-        NSString *stmt = @"UPDATE Ticket SET Admit_Status='1' WHERE  Unique_ID=?";
+        NSString *stmt = @"UPDATE Ticket SET Admit_Status=? WHERE  Unique_ID=?";
         
-        [database executeUpdate:stmt,unique_id];
+        [database executeUpdate:stmt,ticket.ticket_admit_status,ticket.ticket_unique_id];
         
         NSLog(@"%@",[database lastErrorMessage]);
         if([database lastErrorCode]==0)

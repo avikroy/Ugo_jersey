@@ -72,17 +72,25 @@
     self.EventStartTimeVal_Lbl.text=self.event.event_start_time;
     self.EventEndTimeVal_Lbl.text=self.event.event_end_time;
     
-    if([self.ticket.ticket_admit_status isEqualToString:@"1"]){
-        self.btnAllowEntry.enabled=NO;
-    }else{
-        self.btnAllowEntry.enabled=YES;
+   
+//    else if([self.ticket.ticket_admit_status integerValue] ==kTicketDeclinedMannually){
+//        self.btnAllowEntry.enabled=NO;
+//        self.btnDeclineEntry.enabled=NO;
+//    }
 
-    }
 }
+
 -(void)viewWillAppear:(BOOL)animated
 {
     [self.navigationItem setHidesBackButton:YES animated:NO];
     [self createNavigationView];
+    if([self.ticket.ticket_admit_status integerValue] ==kTicketAdmitted){
+        self.btnAllowEntry.enabled=NO;
+        self.btnDeclineEntry.enabled=YES;
+    }else if([self.ticket.ticket_admit_status integerValue] ==kTicketDeclined){
+        self.btnAllowEntry.enabled=YES;
+        self.btnDeclineEntry.enabled=NO;
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -110,8 +118,8 @@
          [alert setCancelButtonWithTitle:@"Ok" block:nil];
          [alert show];*/
         
-        self.ticket.ticket_admit_status=@"1";
-        [DBManager updateTicketToAdmitted:self.ticket.ticket_unique_id];
+        self.ticket.ticket_admit_status=[NSString stringWithFormat:@"%d",kTicketAdmitted];
+        [DBManager updateTicketToAdmitted:self.ticket];
         
         self.StatVal_Lbl.text=[self admitStatusForTicket:[self.ticket.ticket_admit_status intValue]];
         
@@ -124,6 +132,9 @@
 }
 - (IBAction)declineEntryAction:(id)sender
 {
+    self.ticket.ticket_admit_status=[NSString stringWithFormat:@"%d",kTicketDeclined];
+    [DBManager updateTicketToAdmitted:self.ticket];
+    
     AdmitStatusVC *adminStat = [[AdmitStatusVC alloc] init];
     adminStat.strStatus=@"decline";
     adminStat.navStatus=@"check";
@@ -169,7 +180,7 @@
         if ([[finalDict objectForKey:@"web_request_succsess_status"] isEqualToString:@"1"])
         {
             self.ticket.ticket_admit_status=@"1";
-            [DBManager updateTicketToAdmitted:self.ticket.ticket_unique_id];
+            [DBManager updateTicketToAdmitted:self.ticket];
             
             self.StatVal_Lbl.text=[self admitStatusForTicket:[self.ticket.ticket_admit_status intValue]];
             

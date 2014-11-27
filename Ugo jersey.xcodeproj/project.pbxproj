@@ -160,6 +160,8 @@
 		8C1E4E96189C345400D1ECEE /* viewsaveticket2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C1E4E95189C345400D1ECEE /* viewsaveticket2.png */; };
 		8C1E4E98189C345A00D1ECEE /* ticketlist2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C1E4E97189C345A00D1ECEE /* ticketlist2.png */; };
 		8C1E4E9A189C346100D1ECEE /* viewsaveticket1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C1E4E99189C346100D1ECEE /* viewsaveticket1.png */; };
+		8C21611E1A27791A00DB4E27 /* CrashReporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C95008D198D6AA500175350 /* CrashReporter.framework */; };
+		8C21611F1A27792400DB4E27 /* libPDFCreate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CBBFD491975901900CC1F62 /* libPDFCreate.a */; };
 		8C34CD831953EBB7000721FF /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C34CD821953EBB7000721FF /* FacebookSDK.framework */; };
 		8C37165018D4883E00C31B48 /* print.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C37164F18D4883E00C31B48 /* print.png */; };
 		8C37165218D4885A00C31B48 /* save_new.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C37165118D4885A00C31B48 /* save_new.png */; };
@@ -177,8 +179,6 @@
 		8C91CAA119F375AF0050F1A2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C91CAA019F375AF0050F1A2 /* Images.xcassets */; };
 		8C950092198D736700175350 /* MailObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C950091198D736700175350 /* MailObject.m */; };
 		8C950094198D763100175350 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C950093198D763100175350 /* MessageUI.framework */; };
-		8C9C309B1A1A53A900344C43 /* libPDFCreate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CBBFD491975901900CC1F62 /* libPDFCreate.a */; };
-		8C9C309C1A1A53B300344C43 /* CrashReporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C95008D198D6AA500175350 /* CrashReporter.framework */; };
 		8CD874A918A9130A00887033 /* footer.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CD874A818A9130A00887033 /* footer.png */; };
 		8CD874AD18A915EC00887033 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD874AC18A915EC00887033 /* GTMNSString+HTML.m */; };
 		8CD874B018A91A9A00887033 /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD874AF18A91A9A00887033 /* NSString+HTML.m */; };
@@ -491,8 +491,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C9C309C1A1A53B300344C43 /* CrashReporter.framework in Frameworks */,
-				8C9C309B1A1A53A900344C43 /* libPDFCreate.a in Frameworks */,
+				8C21611F1A27792400DB4E27 /* libPDFCreate.a in Frameworks */,
+				8C21611E1A27791A00DB4E27 /* CrashReporter.framework in Frameworks */,
 				8C37E8DE19A6503100188755 /* libzbar.a in Frameworks */,
 				8C950094198D763100175350 /* MessageUI.framework in Frameworks */,
 				8C34CD831953EBB7000721FF /* FacebookSDK.framework in Frameworks */,
@@ -1542,8 +1542,8 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: UGOJERSEY ENTERTAINMENT LTD (5V673NY2AF)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: UGOJERSEY ENTERTAINMENT LTD (5V673NY2AF)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Anderson Begeman (V9C4ZLSB8B)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Anderson Begeman (V9C4ZLSB8B)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1558,8 +1558,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "2C95E5B5-F362-4917-84F8-2B7B0E1B5795";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "2C95E5B5-F362-4917-84F8-2B7B0E1B5795";
+				PROVISIONING_PROFILE = "1D610AA5-FB20-4962-AE38-4FB7A097039B";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "1D610AA5-FB20-4962-AE38-4FB7A097039B";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s";
@@ -1578,8 +1578,8 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: UGOJERSEY ENTERTAINMENT LTD (5V673NY2AF)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: UGOJERSEY ENTERTAINMENT LTD (5V673NY2AF)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Anderson Begeman (V9C4ZLSB8B)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Anderson Begeman (V9C4ZLSB8B)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -1587,8 +1587,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "2C95E5B5-F362-4917-84F8-2B7B0E1B5795";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "2C95E5B5-F362-4917-84F8-2B7B0E1B5795";
+				PROVISIONING_PROFILE = "1D610AA5-FB20-4962-AE38-4FB7A097039B";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "1D610AA5-FB20-4962-AE38-4FB7A097039B";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1601,12 +1601,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: UGOJERSEY ENTERTAINMENT LTD (5V673NY2AF)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Anderson Begeman (V9C4ZLSB8B)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Ugo",
 					jersey,
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/iOS",
+					Framework,
+					"$(PROJECT_DIR)/iOS",
+					Framework,
+					"$(PROJECT_DIR)/iOS",
+					Framework,
 					"$(PROJECT_DIR)/iOS",
 					Framework,
 					"$(PROJECT_DIR)/iOS",
@@ -1660,7 +1666,7 @@
 					"$(PROJECT_DIR)/LibzBar",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "2C95E5B5-F362-4917-84F8-2B7B0E1B5795";
+				PROVISIONING_PROFILE = "1D610AA5-FB20-4962-AE38-4FB7A097039B";
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1671,12 +1677,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: UGOJERSEY ENTERTAINMENT LTD (5V673NY2AF)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Anderson Begeman (V9C4ZLSB8B)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Ugo",
 					jersey,
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/iOS",
+					Framework,
+					"$(PROJECT_DIR)/iOS",
+					Framework,
+					"$(PROJECT_DIR)/iOS",
+					Framework,
 					"$(PROJECT_DIR)/iOS",
 					Framework,
 					"$(PROJECT_DIR)/iOS",
@@ -1730,7 +1742,7 @@
 					"$(PROJECT_DIR)/LibzBar",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "2C95E5B5-F362-4917-84F8-2B7B0E1B5795";
+				PROVISIONING_PROFILE = "1D610AA5-FB20-4962-AE38-4FB7A097039B";
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
