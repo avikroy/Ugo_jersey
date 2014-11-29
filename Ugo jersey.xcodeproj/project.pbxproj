@@ -154,14 +154,14 @@
 		296F807B17A97A3D001BA9B3 /* TicketEntryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 296F807917A97A3D001BA9B3 /* TicketEntryVC.m */; };
 		296F807C17A97A3D001BA9B3 /* TicketEntryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 296F807A17A97A3D001BA9B3 /* TicketEntryVC.xib */; };
 		299422C317C4DA580043CA4E /* UgoJersey.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 299422C217C4DA580043CA4E /* UgoJersey.sqlite */; };
+		8C09FC1E1A298A8800CC1391 /* CrashReporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C95008D198D6AA500175350 /* CrashReporter.framework */; };
+		8C09FC1F1A298A9100CC1391 /* libPDFCreate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CBBFD491975901900CC1F62 /* libPDFCreate.a */; };
 		8C1E4E91189C2CFD00D1ECEE /* TicketListing+AdminViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C1E4E8F189C2CFD00D1ECEE /* TicketListing+AdminViewController.m */; };
 		8C1E4E92189C2CFD00D1ECEE /* TicketListing+AdminViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C1E4E90189C2CFD00D1ECEE /* TicketListing+AdminViewController.xib */; };
 		8C1E4E94189C344600D1ECEE /* ticketlist1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C1E4E93189C344600D1ECEE /* ticketlist1.png */; };
 		8C1E4E96189C345400D1ECEE /* viewsaveticket2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C1E4E95189C345400D1ECEE /* viewsaveticket2.png */; };
 		8C1E4E98189C345A00D1ECEE /* ticketlist2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C1E4E97189C345A00D1ECEE /* ticketlist2.png */; };
 		8C1E4E9A189C346100D1ECEE /* viewsaveticket1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C1E4E99189C346100D1ECEE /* viewsaveticket1.png */; };
-		8C21611E1A27791A00DB4E27 /* CrashReporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C95008D198D6AA500175350 /* CrashReporter.framework */; };
-		8C21611F1A27792400DB4E27 /* libPDFCreate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CBBFD491975901900CC1F62 /* libPDFCreate.a */; };
 		8C34CD831953EBB7000721FF /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C34CD821953EBB7000721FF /* FacebookSDK.framework */; };
 		8C37165018D4883E00C31B48 /* print.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C37164F18D4883E00C31B48 /* print.png */; };
 		8C37165218D4885A00C31B48 /* save_new.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C37165118D4885A00C31B48 /* save_new.png */; };
@@ -491,8 +491,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C21611F1A27792400DB4E27 /* libPDFCreate.a in Frameworks */,
-				8C21611E1A27791A00DB4E27 /* CrashReporter.framework in Frameworks */,
+				8C09FC1F1A298A9100CC1391 /* libPDFCreate.a in Frameworks */,
+				8C09FC1E1A298A8800CC1391 /* CrashReporter.framework in Frameworks */,
 				8C37E8DE19A6503100188755 /* libzbar.a in Frameworks */,
 				8C950094198D763100175350 /* MessageUI.framework in Frameworks */,
 				8C34CD831953EBB7000721FF /* FacebookSDK.framework in Frameworks */,
@@ -1645,6 +1645,9 @@
 					Framework,
 					"$(PROJECT_DIR)/iOS",
 					Framework,
+					"$(PROJECT_DIR)/iOS",
+					Framework,
+					"/Users/avikroy/Desktop/PROJECTS/HOME_PROJECT/UGO\\ Jersey/Phase\\ 2/app\\ store/Ugo_jersey/iOS\\ Framework",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ugo jersey/Ugo jersey-Prefix.pch";
@@ -1656,7 +1659,7 @@
 				INFOPLIST_FILE = "Ugo jersey/Ugo jersey-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/Ugo jersey/App Classes/Model Classes/ZBarSDK\"",
+					"\\\"$(SRCROOT)/Ugo\\ jersey/App\\ Classes/Model\\ Classes/ZBarSDK\\\"",
 					"$(PROJECT_DIR)/ZBarSDK",
 					"$(PROJECT_DIR)/PDFCreator",
 					/Users/avikroy/Desktop/PROJECTS/HOME_PROJECT/UGO,
@@ -1664,6 +1667,7 @@
 					2/app,
 					store/ZBarSDK,
 					"$(PROJECT_DIR)/LibzBar",
+					"/Users/avikroy/Desktop/PROJECTS/HOME_PROJECT/UGO\\ Jersey/Phase\\ 2/app\\ store/Ugo_jersey/PDFCreator",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "1D610AA5-FB20-4962-AE38-4FB7A097039B";
@@ -1721,6 +1725,9 @@
 					Framework,
 					"$(PROJECT_DIR)/iOS",
 					Framework,
+					"$(PROJECT_DIR)/iOS",
+					Framework,
+					"/Users/avikroy/Desktop/PROJECTS/HOME_PROJECT/UGO\\ Jersey/Phase\\ 2/app\\ store/Ugo_jersey/iOS\\ Framework",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ugo jersey/Ugo jersey-Prefix.pch";
@@ -1732,7 +1739,7 @@
 				INFOPLIST_FILE = "Ugo jersey/Ugo jersey-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/Ugo jersey/App Classes/Model Classes/ZBarSDK\"",
+					"\\\"$(SRCROOT)/Ugo\\ jersey/App\\ Classes/Model\\ Classes/ZBarSDK\\\"",
 					"$(PROJECT_DIR)/ZBarSDK",
 					"$(PROJECT_DIR)/PDFCreator",
 					/Users/avikroy/Desktop/PROJECTS/HOME_PROJECT/UGO,
@@ -1740,6 +1747,7 @@
 					2/app,
 					store/ZBarSDK,
 					"$(PROJECT_DIR)/LibzBar",
+					"/Users/avikroy/Desktop/PROJECTS/HOME_PROJECT/UGO\\ Jersey/Phase\\ 2/app\\ store/Ugo_jersey/PDFCreator",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "1D610AA5-FB20-4962-AE38-4FB7A097039B";

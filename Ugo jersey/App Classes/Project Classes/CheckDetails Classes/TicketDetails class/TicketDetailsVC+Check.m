@@ -73,10 +73,6 @@
     self.EventEndTimeVal_Lbl.text=self.event.event_end_time;
     
    
-//    else if([self.ticket.ticket_admit_status integerValue] ==kTicketDeclinedMannually){
-//        self.btnAllowEntry.enabled=NO;
-//        self.btnDeclineEntry.enabled=NO;
-//    }
 
 }
 
@@ -84,13 +80,19 @@
 {
     [self.navigationItem setHidesBackButton:YES animated:NO];
     [self createNavigationView];
+    
     if([self.ticket.ticket_admit_status integerValue] ==kTicketAdmitted){
         self.btnAllowEntry.enabled=NO;
         self.btnDeclineEntry.enabled=YES;
-    }else if([self.ticket.ticket_admit_status integerValue] ==kTicketDeclined){
+    }
+    else if([self.ticket.ticket_admit_status integerValue] ==kTicketDeclined){
         self.btnAllowEntry.enabled=YES;
         self.btnDeclineEntry.enabled=NO;
+    }else if([self.ticket.ticket_admit_status integerValue] ==kTicketDeclinedMannually){
+        self.btnAllowEntry.enabled=NO;
+        self.btnDeclineEntry.enabled=YES;
     }
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -132,7 +134,7 @@
 }
 - (IBAction)declineEntryAction:(id)sender
 {
-    self.ticket.ticket_admit_status=[NSString stringWithFormat:@"%d",kTicketDeclined];
+    self.ticket.ticket_admit_status=[NSString stringWithFormat:@"%d",kTicketDeclinedMannually];
     [DBManager updateTicketToAdmitted:self.ticket];
     
     AdmitStatusVC *adminStat = [[AdmitStatusVC alloc] init];

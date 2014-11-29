@@ -15,6 +15,7 @@
 typedef enum {
     kTicketDeclined=0,
     kTicketAdmitted,
+    kTicketDeclinedMannually
 }TicketStatus;
 
 @interface TicketDetailsVC_Check : BaseViewController<connectionDidReceiveResponse>
